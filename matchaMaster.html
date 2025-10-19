@@ -6,44 +6,192 @@
   <title>Matcha Master | Ashley John</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/mac-icon.png" />
+  <style>
+    .ios-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 60px 80px;
+      scroll-behavior: smooth;
+    }
+
+    .ios-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .ios-content::-webkit-scrollbar-thumb {
+      background: #d0d0d0;
+      border-radius: 10px;
+    }
+
+    .ios-content::-webkit-scrollbar-thumb:hover {
+      background: #b0b0b0;
+    }
+
+    @media (max-width: 768px) {
+      .ios-content {
+        padding: 30px 25px;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ios-content {
+        padding: 25px 18px;
+      }
+    }
+
+    .case-image,
+    .case-image-grid {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 25px 0;
+    }
+
+    .case-image img,
+    .case-image-grid img {
+      width: 100%;
+      height: auto;
+      max-width: 480px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+    }
+
+    .case-image-grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .caption {
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      margin-top: 8px;
+      font-style: italic;
+      max-width: 480px;
+    }
+
+    @media (max-width: 768px) {
+      .case-image-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body class="ios-window-body">
-
-
   <div class="ios-window">
-   <div class="ios-header">
-  <span class="ios-title">Matcha Master</span>
-</div>
+    <div class="ios-header">
+      <span class="ios-title">Matcha Master</span>
+    </div>
 
     <div class="ios-content">
+      <h2>UX Case Study</h2>
+      <p><strong>Project Name:</strong> Matcha Master</p>
+      <p><strong>Type:</strong> Java Swing Desktop Recipe App</p>
+      <p><strong>Year:</strong> 2025</p>
+      <p><strong>Software Used:</strong> BlueJ, ChatGPT, Notion</p>
+
+      <h3>Project Overview</h3>
       <p>
-      Matcha Master is a Java-based desktop application designed to make exploring and organizing matcha 
-      recipes both simple and visually engaging. Developed using Java Swing and a custom color palette of
-      Matcha Green (#84BA61), Rose Pink (#DD8D8D), and White (#FFFFFF), the app offers an intuitive user interface
-      that enhances the overall experience. 
-      </p>
-      <p>
-          The design includes a welcoming splash screen animation followed
-          by a clean, card-based navigation system for browsing Hot, Cold, and All recipe categories. 
-          Each recipe page features a split layout for ingredients and steps, with interactive options 
-          to favourite, take notes, and share. The Favourites page allows users to revisit their saved 
-          recipes easily. 
-      </p> 
-      <p>
-        This project demonstrates thoughtful integration of UI design principles, 
-          structured Java programming, and user-centered thinking, reflecting a balance between 
-          functionality and aesthetic simplicity.
+        Matcha Master is a recipe app designed exclusively for matcha lovers to explore, save,
+        and organize different matcha recipes. The main goal was to build an engaging and
+        accessible application with clear branding and a focus on minimalism.
       </p>
 
- <div class="back-home">
-          <a href="projects.html">← Back to Projects</a>
-        </div>    </div>
+      <h3>User Research and Discovery</h3>
+      <h4>Competitor Analysis</h4>
+      <p><strong>Tasty</strong> – Pros: beginner-friendly, engaging video content, and community features.
+        Cons: cluttered interface with ads, limited text-based browsing, and few search filters.</p>
+      <p><strong>AllRecipes</strong> – Pros: strong database, user ratings, and reviews.
+        Cons: overwhelming layout, poor branding, and ad-heavy design.</p>
 
-   
-    <div class="ios-footer">
-      
+      <h4>User Interviews</h4>
+      <p>
+        I interviewed two college students who are daily matcha drinkers. They were excited
+        about an app dedicated to matcha recipes, especially one that saves them time and
+        money compared to buying drinks from stores. Both emphasized the need for
+        organized navigation, the ability to save and take notes, and minimal clutter.
+      </p>
+
+      <h4>Survey Insights</h4>
+      <p>
+        Most participants preferred minimal interfaces without ads, organized categories
+        instead of long scrolling feeds, and an easy save option for recipes. Notes and sharing
+        features were highly valued. While visuals were appreciated, users still preferred
+        text and photo-based instructions for quick reference while cooking.
+      </p>
+
+      <h3>Problem Statement</h3>
+      <p>
+        Users struggle to find a clean, organized matcha recipe app that allows them to
+        save, categorize, and customize their experience. <strong>Matcha Master</strong> addresses
+        this by focusing on simplicity, accessibility, and strong visual design.
+      </p>
+
+      <h3>Ideation and Prototyping</h3>
+      <p>
+        I began with sketches and brainstorming sessions to map out potential layouts.
+        I created user flows, personas, and wireframes before moving to high-fidelity
+        prototypes. The final UI incorporated a grid-based recipe menu and clear
+        navigation icons inspired by desktop software aesthetics.
+      </p>
+
+      <div class="case-image-grid">
+        <img src="assets/mm_brainstorming.jpg" alt="Brainstorming">
+        <img src="assets/mm_persona.png" alt="Persona">
+        <img src="assets/mm_userflow.png" alt="User Flow">
+        <img src="assets/mm_sketch.png" alt="Sketches">
+      </div>
+
+      <h3>Usability Testing</h3>
+      <ul>
+        <li>Tested with two college students who are tea enthusiasts.</li>
+        <li>Feedback included requests for icons and a split layout separating ingredients
+          from steps.</li>
+        <li>Final outcome: integrated icons and a split-view layout for improved readability.</li>
+      </ul>
+
+      <h3>Final Solution</h3>
+      <p>
+        Matcha Master offers a minimal, organized, and engaging experience tailored for
+        students and young professionals who enjoy matcha and home brewing. The app
+        combines design clarity with personalization features such as favorites and notes.
+      </p>
+
+      <h3>UI Decisions</h3>
+      <ul>
+        <li><strong>Layout:</strong> Grid-based layout for clarity and easy navigation.</li>
+        <li><strong>Typography:</strong> Pixel Game Regular, Karmatic Arcade for a fun,
+          game-like aesthetic.</li>
+        <li><strong>Color Scheme:</strong> Matcha Green (#84BA61), Rose Pink (#DD8D8D), and White (#FFFFFF).</li>
+      </ul>
+
+      <div class="case-image">
+        <img src="assets/mm_color.png" alt="Matcha Master Colors">
+        <p class="caption">Matcha Master – color scheme</p>
+      </div>
+
+      <ul>
+        <li><strong>Accessibility:</strong> High-contrast text and descriptive icons.</li>
+      </ul>
+
+      <h3>Reflection</h3>
+      <p>
+        This project taught me the importance of prioritization, documentation, and
+        designing for accessibility. I learned to combine design clarity with functionality
+        and focus on how small interface details can enhance user experience.
+      </p>
+
+      <div class="back-home">
+        <a href="projects.html">← Back to Projects</a>
+      </div>
     </div>
   </div>
-
 </body>
 </html>
